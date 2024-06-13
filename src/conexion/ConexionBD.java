@@ -6,8 +6,9 @@
 	import java.sql.SQLException;
 	public class ConexionBD {
 
+			// proyecto creado acorde especificación
 		
-		private static String database="biblioteca";
+		private static String database="biblioteca"; // bbdd correcta
 		private static String usuario="root";
 		private static String contrasena="";
 		private static String url="jdbc:mariadb://localhost/"+database;
@@ -30,6 +31,7 @@
 			try {
 			//Registrar el drive. Previamente habrá que habert 
 			//añadido el drive al proyecto(Build Path)
+				// driver incluido en el pryecto y a la ruta de cosntrucción
 			Class.forName("org.mariadb.jdbc.Driver");
 			
 			//Obtenemos el objeto Connection de la clase

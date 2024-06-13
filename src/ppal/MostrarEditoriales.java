@@ -14,7 +14,7 @@ public class MostrarEditoriales {
 				ConexionBD conexion = new ConexionBD();
 				
 				System.out.println("Conectando a la base de datos...");
-				Connection con = conexion.getConexion();
+				Connection con = conexion.getConexion(); // conexión correcta
 				//Objetos necesarios para hacer una consulta
 				Statement sentencia= null;
 				ResultSet resultado=null;
@@ -26,10 +26,11 @@ public class MostrarEditoriales {
 				//Paso 2. Obtener el Statement
 				sentencia = con.createStatement();
 				//Paso 3. Ejecujtar la sentencia
-				resultado=sentencia.executeQuery("select *from editoriales");
+				resultado=sentencia.executeQuery("select *from editoriales"); // consulta incorrecta espacio antes de from
 				System.out.println("codigo Editoria\t año\t Nombre");		
 				//Paso 4.Recorrer el resultado
 				while(resultado.next()) {
+					// columnas correcta
 					 int codEditorial = resultado.getInt("codEditorial");
 					int anio = resultado.getInt("anio");
 					String nombre = resultado.getString("nombre");
@@ -53,7 +54,7 @@ public class MostrarEditoriales {
 
 		}
 			
-		
+		// repo correcto, commit correcto
 
 	}
 
